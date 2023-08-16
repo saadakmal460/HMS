@@ -1,0 +1,13 @@
+w,1,admin,1
+finance,111,Finance,123
+a,1,Finance,1
+huzaifa,333,admin,03304133887
+qwerty,444,Finance,333
+ahmad,111,hostelite,144,1122334455667,lahore,2
+admin,123,admin,00000000000
+babar,566,hostelite,156,4343434343434,lahore,4
+ali,555,admin,11223344556
+junaid,444,Finance,444
+saad,333,hostelite,158,8888888888888,multan,3
+ali,555,admin,01234567890
+finance,777,Finance,746

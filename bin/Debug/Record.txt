@@ -1,0 +1,3 @@
+fee,10000,No,Revenue
+efewfewg,1313,No,Revenue
+bills,12000,490,Expense

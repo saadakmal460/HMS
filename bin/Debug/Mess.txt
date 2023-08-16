@@ -1,0 +1,7 @@
+Monday,rice
+Tuesday,biryani
+Wednesday,sabzi
+Thursday,Daal
+Friday,Pulao
+Saturday,biryani
+Sunday,Daal

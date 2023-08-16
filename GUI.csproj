@@ -1,0 +1,585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43065CE6-53F3-49C2-96E9-ADED6C96AA2B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\Admin.cs" />
+    <Compile Include="BL\Challan.cs" />
+    <Compile Include="BL\Complaints.cs" />
+    <Compile Include="BL\Expense.cs" />
+    <Compile Include="BL\ExtraBL.cs" />
+    <Compile Include="BL\Finance.cs" />
+    <Compile Include="BL\FinancialRecord.cs" />
+    <Compile Include="BL\Hostelite.cs" />
+    <Compile Include="BL\Mess.cs" />
+    <Compile Include="BL\Notices.cs" />
+    <Compile Include="BL\PayFee.cs" />
+    <Compile Include="BL\Revenue.cs" />
+    <Compile Include="BL\Reviews.cs" />
+    <Compile Include="BL\User.cs" />
+    <Compile Include="BL\Validations.cs" />
+    <Compile Include="DL\ChallanDL.cs" />
+    <Compile Include="DL\ComplaintsDL.cs" />
+    <Compile Include="DL\FinanceDL.cs" />
+    <Compile Include="GUI\AddChalanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddChalanForm.Designer.cs">
+      <DependentUpon>AddChalanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddComplaintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddComplaintForm.Designer.cs">
+      <DependentUpon>AddComplaintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddExpenseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddExpenseForm.Designer.cs">
+      <DependentUpon>AddExpenseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddRevenueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddRevenueForm.Designer.cs">
+      <DependentUpon>AddRevenueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FeeStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FeeStatusForm.Designer.cs">
+      <DependentUpon>FeeStatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FinanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FinanceForm.Designer.cs">
+      <DependentUpon>FinanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DL\FinancialRecordDL.cs" />
+    <Compile Include="DL\MessDL.cs" />
+    <Compile Include="DL\NoticesDL.cs" />
+    <Compile Include="DL\ReviewsDL.cs" />
+    <Compile Include="DL\UserDL.cs" />
+    <Compile Include="GUI\AddAdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddAdminForm.Designer.cs">
+      <DependentUpon>AddAdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddFinance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddFinance.Designer.cs">
+      <DependentUpon>AddFinance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddHosteliteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddHosteliteForm.Designer.cs">
+      <DependentUpon>AddHosteliteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddNoticeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddNoticeForm.Designer.cs">
+      <DependentUpon>AddNoticeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddOfficalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddOfficalForm.Designer.cs">
+      <DependentUpon>AddOfficalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddReviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddReviewForm.Designer.cs">
+      <DependentUpon>AddReviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DelteNoticeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DelteNoticeForm.Designer.cs">
+      <DependentUpon>DelteNoticeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FinancialRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FinancialRecordForm.Designer.cs">
+      <DependentUpon>FinancialRecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GraphicalAnalysisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GraphicalAnalysisForm.Designer.cs">
+      <DependentUpon>GraphicalAnalysisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HosteliteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HosteliteForm.Designer.cs">
+      <DependentUpon>HosteliteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LogInFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LogInFrom.Designer.cs">
+      <DependentUpon>LogInFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MessForm.Designer.cs">
+      <DependentUpon>MessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NoticesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NoticesForm.Designer.cs">
+      <DependentUpon>NoticesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PayFeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PayFeeForm.Designer.cs">
+      <DependentUpon>PayFeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RemoveExpenseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RemoveExpenseForm.Designer.cs">
+      <DependentUpon>RemoveExpenseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RemoveHosteliteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RemoveHosteliteForm.Designer.cs">
+      <DependentUpon>RemoveHosteliteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RemoveRegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RemoveRegistrationForm.Designer.cs">
+      <DependentUpon>RemoveRegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RemoveRevenueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RemoveRevenueForm.Designer.cs">
+      <DependentUpon>RemoveRevenueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RevenueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RevenueForm.Designer.cs">
+      <DependentUpon>RevenueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ReviewsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ReviewsForm.Designer.cs">
+      <DependentUpon>ReviewsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SearchByNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SearchByNameForm.Designer.cs">
+      <DependentUpon>SearchByNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SearchByRnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SearchByRnForm.Designer.cs">
+      <DependentUpon>SearchByRnForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SearchHosteliteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SearchHosteliteForm.Designer.cs">
+      <DependentUpon>SearchHosteliteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UpdateMessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UpdateMessForm.Designer.cs">
+      <DependentUpon>UpdateMessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UpdateRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UpdateRecordForm.Designer.cs">
+      <DependentUpon>UpdateRecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ViewAllotedRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ViewAllotedRooms.Designer.cs">
+      <DependentUpon>ViewAllotedRooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ViewComplaintsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ViewComplaintsForm.Designer.cs">
+      <DependentUpon>ViewComplaintsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ViewHosteliteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ViewHosteliteForm.Designer.cs">
+      <DependentUpon>ViewHosteliteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ViewMessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ViewMessForm.Designer.cs">
+      <DependentUpon>ViewMessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ViewNoticesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ViewNoticesForm.Designer.cs">
+      <DependentUpon>ViewNoticesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ViewReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ViewReportForm.Designer.cs">
+      <DependentUpon>ViewReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\AddChalanForm.resx">
+      <DependentUpon>AddChalanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddComplaintForm.resx">
+      <DependentUpon>AddComplaintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddExpenseForm.resx">
+      <DependentUpon>AddExpenseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddRevenueForm.resx">
+      <DependentUpon>AddRevenueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FeeStatusForm.resx">
+      <DependentUpon>FeeStatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FinanceForm.resx">
+      <DependentUpon>FinanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddAdminForm.resx">
+      <DependentUpon>AddAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddFinance.resx">
+      <DependentUpon>AddFinance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddHosteliteForm.resx">
+      <DependentUpon>AddHosteliteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddNoticeForm.resx">
+      <DependentUpon>AddNoticeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddOfficalForm.resx">
+      <DependentUpon>AddOfficalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddReviewForm.resx">
+      <DependentUpon>AddReviewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DelteNoticeForm.resx">
+      <DependentUpon>DelteNoticeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FinancialRecordForm.resx">
+      <DependentUpon>FinancialRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GraphicalAnalysisForm.resx">
+      <DependentUpon>GraphicalAnalysisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HosteliteForm.resx">
+      <DependentUpon>HosteliteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LogInFrom.resx">
+      <DependentUpon>LogInFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MessForm.resx">
+      <DependentUpon>MessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NoticesForm.resx">
+      <DependentUpon>NoticesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PayFeeForm.resx">
+      <DependentUpon>PayFeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RemoveExpenseForm.resx">
+      <DependentUpon>RemoveExpenseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RemoveHosteliteForm.resx">
+      <DependentUpon>RemoveHosteliteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RemoveRegistrationForm.resx">
+      <DependentUpon>RemoveRegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RemoveRevenueForm.resx">
+      <DependentUpon>RemoveRevenueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RevenueForm.resx">
+      <DependentUpon>RevenueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReviewsForm.resx">
+      <DependentUpon>ReviewsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SearchByNameForm.resx">
+      <DependentUpon>SearchByNameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SearchByRnForm.resx">
+      <DependentUpon>SearchByRnForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SearchHosteliteForm.resx">
+      <DependentUpon>SearchHosteliteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UpdateMessForm.resx">
+      <DependentUpon>UpdateMessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UpdateRecordForm.resx">
+      <DependentUpon>UpdateRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ViewAllotedRooms.resx">
+      <DependentUpon>ViewAllotedRooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ViewComplaintsForm.resx">
+      <DependentUpon>ViewComplaintsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ViewHosteliteForm.resx">
+      <DependentUpon>ViewHosteliteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ViewMessForm.resx">
+      <DependentUpon>ViewMessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ViewNoticesForm.resx">
+      <DependentUpon>ViewNoticesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ViewReportForm.resx">
+      <DependentUpon>ViewReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hms.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hms-removebg-preview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hms-PhotoRoom.png-PhotoRoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hms-PhotoRoom.png-PhotoRoom1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_circle_FILL0_wght400_GRAD0_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %286%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account-circle_119476.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account-circle_1194761.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_add_FILL0_wght400_GRAD0_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_add_FILL0_wght400_GRAD0_opsz481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_281777878_LaVb7LRKpTTo256lpx0G0qOr56lqxQH9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_281777878_LaVb7LRKpTTo256lpx0G0qOr56lqxQH9 %281%29-removebg-preview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-e-commerce-online-shopping-ui-receipt-update-transaction-basic-e-commerce-line-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-e-commerce-online-shopping-ui-receipt-update-transaction-basic-e-commerce-line-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3948979-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3948979-2001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1324046-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-arrow-sign-direction-go-move-navigation-right-arrows-next-arrow-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graph-paper-axis-blank-20x20-1-quadrant-010101-4477bb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3015972.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mess-icon-7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\857681.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1091916.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7037649.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3stars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4stars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expense.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\843410.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expensewhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revenue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic-revenue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7037649w.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

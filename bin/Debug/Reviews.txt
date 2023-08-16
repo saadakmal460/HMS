@@ -1,0 +1,4 @@
+saad,3,good
+saad,3,Nice hostel
+saad,1,very bad
+saad,2,not satisfied
